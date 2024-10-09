@@ -224,6 +224,129 @@ cv.waitKey()
 cv.destroyAllWindows()
 ~~~
 
-![Ejecución](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/pixelart_ejecucion.png)
+<br>
 
+![Ejecución](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/pixelart_ejecucion.png)
+</br>
+
+---
+
+### Transformaciones geometricas
+#### codigo:
+~~~
+import cv2 as cv
+import numpy as np
+import math
+
+img = cv.imread('gato.jpg', 0)
+x, y = img.shape
+
+traslated_img = np.zeros((x,y), dtype=np.uint8)
+for i in range(x):
+    for j in range(y):
+        traslated_img[int(i*0.5)+60,int(j*0.5)+50] = img[i,j]
+
+#Crear una imagen vacia para almacenar el resultado
+rotated_img = np.zeros((x*2, y*2), dtype = np.uint8)
+xx, yy = rotated_img.shape
+#Calcular el centro de la imagen
+cx, cy = int(y // 2),int(x // 2) 
+
+#Definir el angulo de rotacion en grados y convertirlo a radianes
+angle = 45 
+theta = math.radians(angle)
+
+#Rotar la imagen
+for i in range(x):
+    for j in range(y):
+        new_x = int((j - cx) * math.cos(theta) - (i - cy) * math.sin(theta) + cx)
+        new_y = int((j - cx) * math.sin(theta) + (i - cy) * math.cos(theta) + cy)
+        if 0 <= new_x < y and 0 <= new_y < x:
+            rotated_img[new_y, new_x] = img[i,j]
+
+#Definir el factor de escala
+scale_x, scale_y =0.8, 0.8
+
+#Crear una nueva imagen para almacenar el escalado
+scaled_img = np.zeros((int(x * scale_y), int(y * scale_x)), dtype=np.uint8)
+
+#Aplicar el escalado
+for i in range(int(x * scale_y)):
+    for j in range(int(y * scale_x)):
+        orig_x = int(i * scale_y)
+        orig_y = int(j * scale_x)
+        if 0 <= orig_x < x and 0 <= orig_y < y:
+            scaled_img[i, j] = img[orig_x, orig_y]
+
+cv.imshow('imagen normal', img)
+cv.imshow('imagen trasladada', traslated_img)
+cv.imshow('imagen rotada (modo raw)', rotated_img)
+cv.imshow('Imagen Escalada (modo raw)', scaled_img)
+
+cv.waitKey()
+cv.destroyWindow
+~~~
+
+</br>
+
+![Ejecución](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/transformaciones_geometricas_ejecucion.png)
+</br>
+
+---
+
+### Investigacion Ecuaciones parametricas
+
+En matemáticas, un sistema de ecuaciones paramétricas permite representar una curva o superficie en el plano o en el espacio, mediante valores que recorren un intervalo de números reales, mediante una variable, llamada parámetro, considerando cada coordenada de un punto como una función dependiente del parámetro.
+
+En el uso estándar del sistema de coordenadas, una o dos variables (dependiendo de si se utilizan dos o tres dimensiones respectivamente) son consideradas como variables independientes, mientras que la restante es la variable dependiente, con el valor de esta siendo equivalente al de la imagen de la función cuando los restantes valores son sus parámetros. Así por ejemplo la expresión de un punto cualquiera 
+(x, y) equivale a la expresión (x, f(x)).
+
+Esta representación tiene la limitación de requerir que la curva sea una función de x en y, es decir que todos los valores x tengan un solo valor y (y solamente uno) correspondiente en y. No todas las curvas cumplen con dicha condición. Para poder trabajar con la misma como si se tratara de una función, lo que se hace es elegir un dominio y una imagen diferentes, en donde la misma sí sea función. Para hacer esto, tanto x como y son considerados variables dependientes, cuyo resultado surge de una tercera variable (sin representación gráfica) conocida como «parámetro».
+
+En algunos casos, ayuda a simplificar la derivación y la integración, en vez del caso y = f(x) o de z = F(x, y).
+
+<br>
+
+#### Ejemplo
+Sea 3x-2y-5=0 la ecuación general de una recta, entonces caben las ecuaciones paramétricas:
+<br>
+
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP1.png)
+<br>
+
+#### Otro ejemplo
+Dada la ecuación y=x^2 una parametrización tendrá la forma               
+<br>                                                                               
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP2.png)
+<br>
+
+Una parametrización posible sería 
+<br>
+
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP3.png)
+<br>
+
+Se debe destacar que para cada curva existen infinitas parametrizaciones posibles. Una en donde x e y equivaliesen a 2U y 4U^2 con U∈R, respectivamente, sería igualmente válida. La diferencia sería que, para encontrar un punto determinado (a, b) de la curva, el valor del parámetro sería diferente en cada caso. Con el ejemplo dado, el punto (2, 4) de la curva aparecería en la primera parametrización cuando t = 2, y en el segundo cuando U = 1.
+<br>
+
+#### Curvas
+La expresión paramétrica de una función permite la construcción de una gran variedad de formas, simplemente variando alguna constante. A continuación, se describe la función paramétrica:
+<br>
+
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP4.png)
+<br>
+
+que, para la cual, dependiendo del ratio a/b pueden obtenerse formas muy diversas.
+
+En esta otra función se puede ver una gran variedad de formas en función de los exponentes j y k, variando los parámetros a, b, c y d.
+<br>
+
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP5.png)
+
+<br>
+
+#### Diferentes figuras variando k:
+
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP6.png)
+<br>
 ---

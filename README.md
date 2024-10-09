@@ -224,7 +224,10 @@ cv.waitKey()
 cv.destroyAllWindows()
 ~~~
 
+<br>
+
 ![Ejecución](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/pixelart_ejecucion.png)
+</br>
 
 ---
 
@@ -284,7 +287,10 @@ cv.waitKey()
 cv.destroyWindow
 ~~~
 
+</br>
+
 ![Ejecución](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/transformaciones_geometricas_ejecucion.png)
+</br>
 
 ---
 
@@ -299,32 +305,48 @@ Esta representación tiene la limitación de requerir que la curva sea una funci
 
 En algunos casos, ayuda a simplificar la derivación y la integración, en vez del caso y = f(x) o de z = F(x, y).
 
----
+<br>
+
 #### Ejemplo
 Sea 3x-2y-5=0 la ecuación general de una recta, entonces caben las ecuaciones paramétricas:
+<br>
 
 ![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP1.png)
+<br>
 
 #### Otro ejemplo
-Dada la ecuación y=x^2 una parametrización tendrá la forma                                                                                                
+Dada la ecuación y=x^2 una parametrización tendrá la forma               
+<br>                                                                               
 ![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP2.png)
+<br>
 
 Una parametrización posible sería 
+<br>
+
 ![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP3.png)
+<br>
 
 Se debe destacar que para cada curva existen infinitas parametrizaciones posibles. Una en donde x e y equivaliesen a 2U y 4U^2 con U∈R, respectivamente, sería igualmente válida. La diferencia sería que, para encontrar un punto determinado (a, b) de la curva, el valor del parámetro sería diferente en cada caso. Con el ejemplo dado, el punto (2, 4) de la curva aparecería en la primera parametrización cuando t = 2, y en el segundo cuando U = 1.
+<br>
 
----
 #### Curvas
 La expresión paramétrica de una función permite la construcción de una gran variedad de formas, simplemente variando alguna constante. A continuación, se describe la función paramétrica:
+<br>
+
 ![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP4.png)
+<br>
 
 que, para la cual, dependiendo del ratio a/b pueden obtenerse formas muy diversas.
 
 En esta otra función se puede ver una gran variedad de formas en función de los exponentes j y k, variando los parámetros a, b, c y d.
+<br>
+
 ![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP5.png)
+<br>
 
 #### Diferentes figuras variando k:
-![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP6.png)
+<br>
 
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP6.png)
+<br>
 ---

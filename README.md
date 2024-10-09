@@ -342,10 +342,10 @@ En esta otra función se puede ver una gran variedad de formas en función de lo
 <br>
 
 ![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP5.png)
+
 <br>
 
 #### Diferentes figuras variando k:
-<br>
 
 ![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP6.png)
 <br>

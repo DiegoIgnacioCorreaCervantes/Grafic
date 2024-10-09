@@ -455,34 +455,53 @@ cv2.destroyAllWindows()
 Cambiamos el valor k para obtener diferentes graficas
 <br>
 
-![1.-](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP1.png)
+1.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP1.png)
+<br>
 <br>
 
-![2.-](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP2.png)
+2.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP2.png)
+<br>
 <br>
 
-![3.-](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP3.png)
+3.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP3.png)
+<br>
 <br>
 
-![4.-](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP4.png)
+4.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP4.png)
+<br>
 <br>
 
-![5.-](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP5.png)
+5.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP5.png)
+<br>
 <br>
 
-![6.-](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP6.png)
+6.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP6.png)
+<br>
 <br>
 
-![7.-](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP7.png)
+7.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP7.png)
+<br>
 <br>
 
-![8.-](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP8.png)
+8.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP8.png)
+<br>
 <br>
 
-![9.-](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP9.png)
+9.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP9.png)
+<br>
 <br>
 
-![10.-](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP10.png)
+10.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP10.png)
 <br>
 
 Cambiando la formula r obtenemos graficas distintas:

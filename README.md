@@ -349,4 +349,175 @@ En esta otra función se puede ver una gran variedad de formas en función de lo
 
 ![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/IP6.png)
 <br>
+
+---
+<br>
+
+### Dibujo usando primitivas de dibujo
+#### Codigo:
+
+~~~
+import cv2 as cv
+import numpy as np
+
+img = np.ones((500, 500, 3), dtype=np.uint8)*255
+
+cv.rectangle(img, (0,0), (500,270), (255,255,0), -1)
+cv.circle(img, (250, 210), 90, (0,255,255), -1)
+cv.rectangle(img, (0,270), (500,500), (0,182,141), -1)
+
+cv.circle(img, (75, 55), 28, (255,255,255), -1)
+cv.circle(img, (45, 60), 18, (255,255,255), -1)
+cv.circle(img, (105, 60), 15, (255,255,255), -1)
+
+cv.circle(img, (275, 65), 28, (255,255,255), -1)
+cv.circle(img, (240, 70), 18, (255,255,255), -1)
+cv.circle(img, (305, 70), 15, (255,255,255), -1)
+
+cv.circle(img, (465, 35), 28, (255,255,255), -1)
+cv.circle(img, (435, 40), 18, (255,255,255), -1)
+cv.circle(img, (495, 40), 15, (255,255,255), -1)
+
+cv.imshow('imagen', img)
+cv.waitKey()
+cv.destroyWindow()
+~~~
+<br>
+
+![Ejecucion](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/PDE.png)
+<br>
+
+---
+
+### Dibujar 10 Parametricas
+#### Codigo:
+
+~~~
+#Curva de Limacon
+import cv2 as cv2
+import numpy as np
+
+# Definir los parámetros iniciales
+width, height = 1000, 1000  # Ampliar la ventana para ver toda la figura
+img = np.ones((height, width, 3), dtype=np.uint8)*255
+
+# Parámetros de la curva de Limacon
+a, b = 150, 100  # Reducir los valores de a y b para que la curva se ajuste mejor
+k = 0.5 # Constante de multiplicación del ángulo
+theta_increment = 0.05  # Incremento del ángulo
+max_theta = 2 * np.pi  # Un ciclo completo
+
+# Centro de la imagen
+center_x, center_y = width // 2, height // 2
+
+theta = 0  # Ángulo inicial
+
+while True:  # Bucle infinito
+    # Limpiar la imagen
+    img = np.ones((width, height, 3), dtype=np.uint8) * 255
+    
+    # Dibujar la curva completa desde 0 hasta theta
+    for t in np.arange(0, theta, theta_increment):
+        # Calcular las coordenadas paramétricas (x, y) para la curva de Limacon
+        #r = a + b * np.cos(k * t)
+        r = a + b * np.cos(k * t)
+        #x = int(center_x + r * np.cos(t))
+        #y = int(center_y + r * np.sin(t))
+        x = int(center_x + r * np.sin(t))
+        y = int(center_y + r * np.cos(t))
+        
+        # Dibujar un círculo en la posición calculada
+        cv2.circle(img, (x, y), 2, (0, 234, 0), 2)  # Color rojo
+        cv2.circle(img, (x-2, y-2), 2, (0, 0, 0), 2)  # Color rojo
+
+    # Mostrar la constante k en la imagen
+    #cv2.putText(img, f"k = {k:.2f}", (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+    
+    # Mostrar la imagen
+    cv2.imshow("Parametric Animation", img)
+    
+    # Incrementar el ángulo
+    theta += theta_increment
+    
+    # Reiniciar theta si alcanza su valor máximo
+    #if theta >= max_theta:
+    #    theta = 0  # Reinicia la animación para que se repita
+
+    # Pausar para ver la animación
+    if cv2.waitKey(30) & 0xFF == 27:  # Esperar 30ms, salir con 'ESC'
+        break
+
+# Cerrar la ventana al finalizar
+cv2.destroyAllWindows()
+~~~
+<br>
+
+Cambiamos el valor k para obtener diferentes graficas
+<br>
+
+1.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP1.png)
+<br>
+<br>
+
+2.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP2.png)
+<br>
+<br>
+
+3.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP3.png)
+<br>
+<br>
+
+4.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP4.png)
+<br>
+<br>
+
+5.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP5.png)
+<br>
+<br>
+
+6.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP6.png)
+<br>
+<br>
+
+7.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP7.png)
+<br>
+<br>
+
+8.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP8.png)
+<br>
+<br>
+
+9.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP9.png)
+<br>
+<br>
+
+10.-
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP10.png)
+<br>
+<br>
+<br>
+
+Cambiando la formula r obtenemos graficas distintas:
+<br>
+<br>
+
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP11.png)
+<br>
+<br>
+
+**Resultado**
+<br>
+
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP12.png)
+<br>
+
 ---

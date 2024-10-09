@@ -228,7 +228,7 @@ cv.destroyAllWindows()
 
 ---
 
-### Dibujo pixel art
+### Transformaciones geometricas
 #### codigo:
 ~~~
 import cv2 as cv

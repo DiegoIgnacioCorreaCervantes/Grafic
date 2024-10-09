@@ -503,13 +503,17 @@ Cambiamos el valor k para obtener diferentes graficas
 10.-
 ![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP10.png)
 <br>
+<br>
 
 Cambiando la formula r obtenemos graficas distintas:
+<br>
 
 ![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP11.png)
 <br>
+<br>
 
-![Resultado](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP12.png)
+**Resultado**
+![](https://github.com/DiegoIgnacioCorreaCervantes/Grafic/blob/main/Imagenes_archivomd/DP12.png)
 <br>
 
 ---

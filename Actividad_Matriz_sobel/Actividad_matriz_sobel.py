@@ -20,66 +20,67 @@ for i in range(x):
         #orig_y = int(j * scale_x)
         #if 0 <= orig_x < x and 0 <= orig_y < y:
             scaled_img[i*2, j*2] = img[i, j]
-         
+
 # Obtener el tamaño de la imagen escalada
 xs, ys = scaled_img.shape
 
-# Aplicar matriz 1/9
+# Aplicar matriz de sobel
 for i in range(xs):
     for j in range(ys):
+        
         k = 0
         if (i-1)<0 or (j-1)<0:
             n=0
         else:
             n = int(scaled_img[i-1][j-1])
-        k = k + n*(1/9)
+        k = k + n*(-1)
         if (j-1)<0:
              n=0
         else:
              n = int(scaled_img[i][j-1])
-        k = k + n*(1/9)
+        k = k + n*(0)
         if (i+1)>=xs or (j-1)<0:
             n=0
         else:
             n = int(scaled_img[i+1][j-1])
-        k = k + n*(1/9)
+        k = k + n*(1)
         if (i-1)<0:
             n=0
         else:   
             n = int(scaled_img[i-1][j])
-        k = k + n*(1/9)
+        k = k + n*(-2)
        
         n = int(scaled_img[i][j])
-        k = k + n*(1/9)
+        k = k + n*(0)
 
         if (i+1)>=xs:
             n = 0
         else:    
             n = int(scaled_img[i+1][j])
-        k = k + n*(1/9)
+        k = k + n*(2)
         if (i-1)<0 or (j+1)>=ys:
             n=0
         else:
             n = int(scaled_img[i-1][j+1])
-        k = k + n*(1/9)
+        k = k + n*(-1)
         if (j+1)>=ys:
             n=0
         else:
             n = int(scaled_img[i][j+1])
-        k = k + n*(1/9)
+        k = k + n*(0)
         if (i+1)>=xs or (j+1)>=ys:
             n=0
         else:
             n = int(scaled_img[i+1][j+1])
-        k = k + n*(1/9)
+        k = k + n*(1)
 
         if k > 255:
              k=255
         if k < 0:
              k=0
 
-        scaled_img[i][j] = int(k)   
-
+        scaled_img[i][j] = int(k)                 
+        
 # Mostrar la imagen original y la escalada
 cv.imshow('Imagen Original', img)
 cv.imshow('Imagen Escalada (modo raw)', scaled_img)
